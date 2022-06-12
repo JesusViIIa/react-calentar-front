@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import { LoginScreen } from "../auth/LoginScreen";
 import { CalendarScreen } from "../calendar/CalendarScreen";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
@@ -8,7 +7,7 @@ import { startChecking } from "../../actions/auth";
 import { useSelector } from "react-redux";
 import { PublicRoutes } from "./PublicRoutes";
 import { PrivateRoutes } from "./PrivateRoutes";
-import { RegisterScreen } from "../auth/RegisterScreen";
+
 import { AuthRouter } from "./AuthRouter";
 
 export const AppRouter = () => {
