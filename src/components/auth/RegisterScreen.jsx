@@ -71,7 +71,7 @@ export const RegisterScreen = () => {
             <div className="form-group">
               <input type="submit" className="btnSubmit" value="Crear cuenta" />
             </div>
-            <Link className="ForgetPwd" to='/auth/login'>Create an account</Link>
+            <Link className="ForgetPwd" to='/auth/login'>Do you have an account? Login </Link>
           </form>
         </div>
       </div>
