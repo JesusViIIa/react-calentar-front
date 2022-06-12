@@ -1,0 +1,31 @@
+html,
+body {
+    height: 96vh;
+    width: 100vw;
+}
+
+.calendarscreen {
+    display: flex;
+    flex-flow: column;
+    height: 96vh;
+}
+
+.rbc-calendar {
+    height: 100%;
+}
+
+.fab {
+    border-radius: 100%;
+    bottom: 25px;
+    font-size: 25px;
+    padding: 25px;
+    position: fixed;
+    right: 25px;
+}
+
+.fab-danger {
+    bottom: 25px;
+    padding: 10px;
+    position: fixed;
+    left: 25px;
+}
