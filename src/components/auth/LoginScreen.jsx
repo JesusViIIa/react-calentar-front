@@ -3,14 +3,17 @@ import '../../styles/login.css';
 import { useForm } from './../../hooks/useForm';
 import { useDispatch } from 'react-redux';
 import { startLogin } from './../../actions/auth';
+import Swal from "sweetalert2";
 
 
 export const LoginScreen = () => {
     const dispatch = useDispatch()
     const [ loginValues, handleInputLoginChange] = useForm({lemail: '', lpassword:''})
-    const {lemail, lpassword} = loginValues
+    const {lemail, lpassword } = loginValues
     const handleLogin = (e) => { 
         e.preventDefault()
+        if(!lemail) return Swal.fire('Error','Correo requerido', 'error')
+        if(!lpassword  || lpassword.length < 6) return Swal.fire('Error',' Contraseña requerida y mayor a 6 digitos', 'error')
         dispatch(startLogin(lemail,lpassword))
      }
 

@@ -11,6 +11,7 @@ export const RegisterScreen = () => {
     const {rname,remail, rpassword1, rpassword2} = registerValues
      const handleRegister = (e) => { 
         e.preventDefault()
+        if(!rname || !remail || !rpassword1 || !rpassword2) return Swal.fire('Error','Todos los campos son obligatorios', 'error')
 
         if (rpassword1!==rpassword2){
             return Swal.fire('error','Las contraseñas no coinciden', 'error')
